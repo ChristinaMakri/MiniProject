@@ -1,0 +1,80 @@
+@base <http://example.com/mapping/> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix jm: <http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration/> .
+
+<http://example.com/mapping/JobMatchingMap>
+    a rml:TriplesMap;
+
+    rml:logicalSource [
+        rml:source "hrm_final_dataset.csv";
+        rml:referenceFormulation ql:CSV;
+        rml:iterator "/"
+    ];
+
+    rr:subjectMap [
+        rr:template "http://example.com/jobMatching/{id}";
+        rr:class jm:JobMatching
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate jm:contractType;
+        rr:objectMap [ rml:reference "entityType" ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate jm:salaryRange;
+        rr:objectMap [
+            rr:template "{preferredSalaryLower}-{preferredSalaryUpper}";
+            rr:datatype xsd:string
+        ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate jm:requiresSoftSkill;
+        rr:objectMap [ rml:reference "softSkills" ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate jm:requiresHardSkill;
+        rr:objectMap [ rml:reference "hardSkills" ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate jm:fromCountry;
+        rr:objectMap [ rml:reference "fromCountry" ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate jm:toCountry;
+        rr:objectMap [ rml:reference "toCountry" ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate jm:migrationReason;
+        rr:objectMap [ rml:reference "migrationReason" ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate jm:refersToJobSeeker;
+        rr:objectMap [
+            rr:template "http://example.com/jobSeeker/{jobSeekerId}";
+            rr:termType rr:IRI
+        ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate jm:refersToJobOffer;
+        rr:objectMap [
+            rr:template "http://example.com/jobOffer/{jobOfferId}";
+            rr:termType rr:IRI
+        ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate jm:hasScore;
+        rr:objectMap [
+            rml:reference "hasScore";
+            rr:datatype xsd:decimal
+        ]
+    ] .

@@ -1,0 +1,473 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration/"
+     xml:base="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#fromCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#fromCountry">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#LabourMigration"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#CountryOfOrigin"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasApplication -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasApplication">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobSeeker"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Application"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasCertification -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasCertification">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobSeeker"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Certification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasContractType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasContractType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#isContractTypeOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobOffer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#ContractType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasInterview -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasInterview">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobSeeker"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobInterview"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasMigrationHistory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasMigrationHistory">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#isMigrationHistoryOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobSeeker"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#LabourMigration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasPreference -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasPreference">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#isPreferenceOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobSeeker"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobPreference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasReason -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasReason">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#LabourMigration"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#MigrationReason"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasSkill">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#isSkillOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobSeeker"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Skill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasWorkExperience -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasWorkExperience">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobSeeker"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#WorkExperience"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#isContractTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#isContractTypeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#isMatchedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#isMatchedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#matches"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#isMigrationHistoryOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#isMigrationHistoryOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#isOfferMatchedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#isOfferMatchedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#matchesOffer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#isPreferenceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#isPreferenceOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#isRequiredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#isRequiredBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#requiresSkill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#isSkillOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#isSkillOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#locatedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobOffer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Geography"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#matches -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#matches">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobMatchingResult"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobSeeker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#matchesOffer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#matchesOffer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobMatchingResult"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobOffer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#requiresSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#requiresSkill">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobOffer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Skill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#toCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#toCountry">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#LabourMigration"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#DestinationCountry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Company"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobSeeker"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Skill"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasSalary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasSalary">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobOffer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#hasScore">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobMatchingResult"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#migrationYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#migrationYear">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#LabourMigration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#preferenceLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#preferenceLabel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobPreference"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Application -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Application">
+        <rdfs:comment>An application submitted by a job seeker</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Certification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Certification">
+        <rdfs:comment>A professional certification held by a seeker.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Company -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Company">
+        <rdfs:comment>An employer organization.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#ContractType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#ContractType">
+        <rdfs:comment>Type of job contract (e.g., full-time, part-time).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#CountryOfOrigin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#CountryOfOrigin">
+        <rdfs:comment>Original country of a migration event.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#DestinationCountry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#DestinationCountry">
+        <rdfs:comment>Target country of a migration event.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Full-time -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Full-time">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#ContractType"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Part-time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Geography -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Geography">
+        <rdfs:comment>A geographic location entity</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#HardSkill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#HardSkill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Skill"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobInterview -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobInterview">
+        <rdfs:comment>An interview event for a job application.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobMatchingResult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobMatchingResult">
+        <rdfs:comment>Links a job seeker to a job offer with a score.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobOffer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobOffer">
+        <rdfs:comment>An employment offer by a company.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobPreference -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobPreference">
+        <rdfs:comment>A preference of a job seeker (sector, location).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobSeeker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#JobSeeker">
+        <rdfs:comment>Represents a person seeking employment opportunities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#LabourMigration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#LabourMigration">
+        <rdfs:comment>Represents one migration event of a job seeker.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#MigrationReason -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#MigrationReason">
+        <rdfs:comment>Reason for a migration event.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Part-time -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Part-time">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#ContractType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Skill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Skill"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#SoftSkill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#SoftSkill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#Skill"/>
+        <rdfs:comment>A non‐technical skill (e.g., teamwork).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#WorkExperience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#WorkExperience">
+        <rdfs:comment>A period of past employment.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

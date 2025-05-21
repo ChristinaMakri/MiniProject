@@ -1,0 +1,49 @@
+PREFIX jm: <http://www.semanticweb.org/cmakri/ontologies/2025/4/JobMatching-Migration#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# 1. Λίστα όλων των υποψηφίων
+SELECT ?seeker
+WHERE { ?seeker a jm:JobSeeker }
+
+# 2. Θέσεις εργασίας & μισθοί
+SELECT ?offer ?salary
+WHERE { ?offer a jm:JobOffer; jm:hasSalary ?salary }
+
+# 3. Αντιστοιχίσεις με score > 0.8
+SELECT ?seeker ?offer ?score
+WHERE {
+  ?match a jm:JobMatchingResult;
+         jm:matches ?seeker;
+         jm:matchesOffer ?offer;
+         jm:hasScore ?score .
+  FILTER (?score > 0.8)
+}
+
+# 4. Μέση βαθμολογία ανά θέση
+SELECT ?offer (AVG(?s) AS ?avgScore)
+WHERE {
+  ?match a jm:JobMatchingResult;
+         jm:matchesOffer ?offer;
+         jm:hasScore ?s .
+}
+GROUP BY ?offer
+
+# 5. Μεταναστεύσεις ανά έτος
+SELECT ?year (COUNT(?m) AS ?count)
+WHERE { ?m a jm:LabourMigration; jm:migrationYear ?year }
+GROUP BY ?year
+ORDER BY ?year
+
+
+# 6. Top-3 χώρες προορισμού με τις περισσότερες μεταναστεύσεις
+SELECT ?dest (COUNT(?m) AS ?count)
+WHERE { ?m a jm:LabourMigration; jm:toCountry ?dest }
+GROUP BY ?dest
+ORDER BY DESC(?count)
+LIMIT 3
+
+# 7. Αριθμός προτιμήσεων ανά υποψήφιο
+SELECT ?seeker (COUNT(?p) AS ?numPrefs)
+WHERE { ?p a jm:JobPreference; jm:isPreferenceOf ?seeker }
+GROUP BY ?seeker
+HAVING (?numPrefs >= 1)
